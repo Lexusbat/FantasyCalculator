@@ -9,20 +9,20 @@ function App() {
   return (
     <div>
       <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md p-8">01</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">02</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">03</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">01</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">02</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">03</div>
       </div>
       <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md p-8">04</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">05</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">06</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">04</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">05</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">06</div>
 
       </div>
       <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md p-8">07</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">08</div>
-        <div className= " w-20 bg-blue-500 rounded-md p-8">09</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">07</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">08</div>
+        <div className= " w-20 bg-blue-500 rounded-md m-4">09</div>
       </div>
     </div>
   )
