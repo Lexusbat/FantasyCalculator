@@ -7,9 +7,24 @@ import './index.css'
 function App() {
 
   return (
-  <div className="bg-red-500 text-white p-4">
-   Test
-  </div>
+    <div>
+      <div className="flex flex-row">
+        <div className= " w-20 bg-blue-500 rounded-md p-8">01</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">02</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">03</div>
+      </div>
+      <div className="flex flex-row">
+        <div className= " w-20 bg-blue-500 rounded-md p-8">04</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">05</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">06</div>
+
+      </div>
+      <div className="flex flex-row">
+        <div className= " w-20 bg-blue-500 rounded-md p-8">07</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">08</div>
+        <div className= " w-20 bg-blue-500 rounded-md p-8">09</div>
+      </div>
+    </div>
   )
 }
 
