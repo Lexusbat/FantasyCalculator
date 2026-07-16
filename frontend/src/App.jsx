@@ -8,21 +8,21 @@ function App() {
 
   return (
     <div>
-      <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md m-4">01</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">02</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">03</div>
+      <div className="flex flex-row  space-x-4 ">
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">01</div>
+        <div className= " w-20 h-20 bg-blue-500 rounded-md">02</div>
+        <div className= " w-20 h-20 bg-blue-500 rounded-md">03</div>
       </div>
-      <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md m-4">04</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">05</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">06</div>
+      <div className="flex flex-row  space-x-4 ">
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">04</div>
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">05</div>
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">06</div>
 
       </div>
-      <div className="flex flex-row">
-        <div className= " w-20 bg-blue-500 rounded-md m-4">07</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">08</div>
-        <div className= " w-20 bg-blue-500 rounded-md m-4">09</div>
+      <div className="flex flex-row  space-x-4 ">
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">07</div>
+        <div className= " w-20 h-20 bg-blue-500 rounded-md ">08</div>
+        <div className= " w-20 h-20                                                    bg-blue-500 rounded-md ">09</div>
       </div>
     </div>
   )
