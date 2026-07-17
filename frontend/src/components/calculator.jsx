@@ -7,7 +7,7 @@ function Calculator() {
 
   return (
     <>
-     <div className='bg-white rounded-xl absolute inset-center flex items-center justify-center top-100 w-50 h-10'>
+     <div className='bg-white rounded-xl absolute inset-center flex items-center justify-center top-70 w-50 h-10'>
         <Display value={display} />
      </div>
       <ButtonGrid display={display} setDisplay={setDisplay} />

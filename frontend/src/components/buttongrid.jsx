@@ -9,7 +9,7 @@ const BUTTONS = [
 
 function ButtonGrid({ display, setDisplay }) {
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 ">
       {BUTTONS.map((value) => (
         <Button key={value} value={value} display={display} setDisplay={setDisplay} />
       ))}
