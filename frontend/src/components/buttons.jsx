@@ -4,12 +4,13 @@ function Button({value},{display},{setdisplay}){
 
 
  function HandleClick(){
-    setdisplay(display + value)
+    setDisplay(display + value)
 
-    return
+    return(
     <button onClick={HandleClick}> 
        {value}
     </button>
+    )
 
 
  }

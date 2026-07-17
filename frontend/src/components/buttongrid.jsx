@@ -1,12 +1,12 @@
 import Buttons from './buttons'
 
-function ButtonGrid({ display }, { setdisplay }) {
-return 
+function ButtonGrid({ display }, { setDisplay }) {
+return (
 <>
 <button>
     value = "1"
     display = {display}
-    setdisplay = {setdisplay}
+    setdisplay = {setDisplay}
 </button>
 
 <button>
@@ -16,5 +16,6 @@ return
 </button>
 
 </>
+)
 }
 export default ButtonGrid;

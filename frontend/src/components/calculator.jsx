@@ -4,16 +4,16 @@ import ButtonGrid from './buttongrid'
 
 function Calculator() {
 
-    const [display, setdisplay] = useState("")
+    const [display, setDisplay] = useState("")
 
-    return
+    return (
     <>
         < Display value={display} />
         < ButtonGrid
             display={display}
-            setdisplay={setdisplay} />
+            setdisplay={setDisplay} />
     </>
-
+    )
 }
 
 export default Calculator;

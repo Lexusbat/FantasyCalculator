@@ -1,9 +1,10 @@
 
 
 function Display({value})
-{ return
+{ return (
   <div className= "">
     {value}
   </div>
+    )
 }
 export default Display;
