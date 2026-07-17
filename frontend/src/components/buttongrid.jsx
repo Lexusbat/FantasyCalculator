@@ -1,15 +1,15 @@
 import Button from './buttons'
 
 const BUTTONS = [
-  '1','2','3',
-  '4','5','6',
-  '7','8','9',
-  '0',
-]
+  "7", "8", "9", "/",
+  "4", "5", "6", "*",
+  "1", "2", "3", "-",
+  "0", ".", "=", "+"
+];
 
 function ButtonGrid({ display, setDisplay }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+    <div className="grid grid-cols-4 gap-4">
       {BUTTONS.map((value) => (
         <Button key={value} value={value} display={display} setDisplay={setDisplay} />
       ))}
