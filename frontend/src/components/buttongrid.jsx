@@ -17,4 +17,4 @@ return
 
 </>
 }
-export default ButtonGrid
+export default ButtonGrid;
