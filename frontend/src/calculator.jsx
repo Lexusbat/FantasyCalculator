@@ -1,22 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Display from './components/display'
-import ButtonGrid from './components/buttongrid'
-import React from "react";
-import buttons from  "./components/buttons.css";
+import CalculatorKey from "./components/buttons.jsx";
+import "./components/buttons.css";
 import "./index.css"
-
-function CalculatorKey(props) {
-  return (
-    <button className={`${props.className}`}
-      onClick={() => props.onClick(props.keyValue)}
-    >
-      {props.keyValue}{" "}
-    </button>
-  );
-}
-
-export default CalculatorKey;
-
 
 
 function Calculator() {
@@ -97,11 +82,9 @@ function Calculator() {
 
 
   return (
-    <>
- return (
     <div className="calculator">
       <div className="calculator-input">
-        <div className="result">{result} </div>
+        <div className="result">{nextValue || "0"}</div>
       </div>
       <div className="calculator-keypad">
         <div className="keys-function">
@@ -140,8 +123,6 @@ function Calculator() {
       </div>
     </div>
   );
-    </>
-  )
 }
 
 export default Calculator;
