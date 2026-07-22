@@ -1,4 +1,4 @@
-import Calculator from "./components/calculator";
+import Calculator from "./calculator";
 import Mascot from "./assets/mascot2.png";
 function App() {
   return (
