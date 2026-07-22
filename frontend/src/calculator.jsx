@@ -1,18 +1,99 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from "react";
 import Display from './components/display'
 import ButtonGrid from './components/buttongrid'
+import React from "react";
+import buttons from  "./components/buttons.css";
+import "./index.css"
 
-function Calculator() {
-
-const [display, setDisplay] = useState("0")        // What the user sees
-const [firstValue, setFirstValue] = useState(null)  // Left operand (e.g., 7 in "7+3")
-const [operator, setOperator] = useState(null)      // Pending operator (e.g., "+")
-const [waitingForNext, setWaitingForNext] = useState(false)  // Whether next digit starts a new number
-
-function handleButtonClick(value) {
-  // We'll build this logic step by step below
+function CalculatorKey(props) {
+  return (
+    <button className={`${props.className}`}
+      onClick={() => props.onClick(props.keyValue)}
+    >
+      {props.keyValue}{" "}
+    </button>
+  );
 }
 
+export default CalculatorKey;
+
+
+
+function Calculator() {
+  
+ const [prevValue, setPrevValue] = useState(0);
+ const [nextValue, setNextValue] = useState("");
+ const [op, setOp] = useState(null);
+ const [result, setResult] = useState("0");
+
+ useEffect(() => {}, [op, nextValue, prevValue]);
+
+  const CalculatorOperations = {
+    "/": (firstValue, secondValue) => firstValue / secondValue,
+    "*": (firstValue, secondValue) => firstValue * secondValue,
+    "+": (firstValue, secondValue) => firstValue + secondValue,
+    "-": (firstValue, secondValue) => firstValue - secondValue,
+    "=": (firstValue, secondValue) => secondValue,
+  };
+
+  const performOperation = () => {
+    let temp = CalculatorOperations[op](
+      parseFloat(prevValue),
+      parseFloat(nextValue)
+    );
+    setOp(null);
+    setNextValue(String(temp));
+    setPrevValue(null);
+  };
+
+  const handleNum = (number) => {
+    setNextValue(nextValue === "0" ? String(number) : nextValue + number);
+  };
+
+  const insertDot = () => {
+    if (!/\./.test(nextValue)) {
+      setNextValue(nextValue + ".");
+    }
+  };
+  const percentage = () => {
+    setNextValue(parseFloat(nextValue) / 100);
+    if (prevValue && nextValue === "") {
+      setPrevValue(parseFloat(prevValue) / 100);
+    }
+  };
+  const changeSign = () => {
+    setNextValue(parseFloat(nextValue) * -1);
+  };
+  const clearData = () => {
+    setNextValue("0");
+    setPrevValue(0);
+  };
+
+  const handleOperation = (value) => {
+    if (Number.isInteger(value)) {
+      handleNum(parseInt(value, 10));
+    } else if (value in CalculatorOperations) {
+      if (op === null) {
+        setOp(value);
+        setPrevValue(nextValue);
+        setNextValue("");
+      }
+      if (op) {
+        setOp(value);
+      }
+      if (prevValue && op && nextValue) {
+        performOperation();
+      }
+    } else if (value === "c") {
+      clearData();
+    } else if (value === "\xB1") {
+      changeSign();
+    } else if (value === ".") {
+      insertDot();
+    } else if (value === "%") {
+      percentage();
+    }
+  };
 
 
   return (

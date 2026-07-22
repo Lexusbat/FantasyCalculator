@@ -1,3 +1,4 @@
+import React from "react";
 import Calculator from "./calculator";
 import Mascot from "./assets/mascot2.png";
 function App() {
