@@ -4,16 +4,13 @@
 .calculator {
   width: 20rem;
   height: 30rem;
-  background-color: lightcyan;
-  display: grid;
-  padding: 1%;
+  background-color: white;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  border: ridge;
 }
 
 .keys-numbers {
@@ -34,7 +31,7 @@
 }
 .calculator-keypad {
   padding-top: 0.3rem;
-  background-color: lightblue;
+  background-color: purple;
   display: grid;
   grid-template-columns: repeat(4, 5rem);
   grid-template-rows: repeat(5, 5rem);
